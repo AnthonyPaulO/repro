@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "umd",
+    "lib": [
+      "ESNext",
+      "dom"
+    ],
+    "jsx": "react",
+    "allowJs": true,
+    // Ensure that .d.ts files are created by tsc, but not .js files
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist",
+    // go to ts/js file when using IDE functions like
+    // "Go to Definition" in VSCode
+    "declarationMap": true,
+    // Ensure that Babel can safely transpile files in the TypeScript project
+    "isolatedModules": true,
+    "sourceMap": true,
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "noImplicitAny": false, // false prevents issues in dependencies; eslint will handle this
+    "strictNullChecks": true,
+
+    /* Module Resolution Options */
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "types": [
+      "node",
+      "jest",
+      "jest-puppeteer",
+    ]
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["**/node_modules/*"]
+}
